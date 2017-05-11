@@ -1,0 +1,8 @@
+machine:
+  node:
+    version: 6.9.1
+  post:
+    - npm install -g npm@3
+  timezone: Asia/Tokyo
+  environment:
+      NODE_ENV: development
