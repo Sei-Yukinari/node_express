@@ -6,3 +6,6 @@ machine:
   timezone: Asia/Tokyo
   environment:
       NODE_ENV: development
+  test:
+    override:
+      - exit 1
