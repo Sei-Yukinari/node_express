@@ -13,4 +13,4 @@ machine:
     production:
       branch: master
       commands:
-        - curl -X POST https://registry.hub.docker.com/u/seiyukinari/node_express/trigger/$DOCKER_HUB_TOKEN/S
+        - curl -X POST https://registry.hub.docker.com/u/seiyukinari/node_express/trigger/$DOCKER_HUB_TOKEN/
