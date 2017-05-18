@@ -9,3 +9,8 @@ machine:
   test:
     override:
       - exit 1
+  deployment:
+    deploy:
+      branch: master
+      commands:
+        - curl -H "Content-Type: application/json" --data '{"build": true}' -X POST https://registry.hub.docker.com/u/seiyukinari/node_express/trigger/fa9997e9-57af-4ff1-b4b6-f11b828b98f3/
