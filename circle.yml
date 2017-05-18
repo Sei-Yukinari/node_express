@@ -5,12 +5,12 @@ machine:
     version: "6.9.1"
   post:
     - "npm install -g npm@3"
+  timezone: Asia/Tokyo
   test:
     override:
       - "exit 1"
   deployment:
-    deploy:
+    production:
       branch: master
       commands:
-        - curl -X POST https://registry.hub.docker.com/u/seiyukinari/node_express/trigger/3aa50748-7409-4618-a485-f2dabd2f220c/
-  timezone: Asia/Tokyo
+        - https://registry.hub.docker.com/u/seiyukinari/node_express/trigger/$DOCKER_HUB_TOKEN/
