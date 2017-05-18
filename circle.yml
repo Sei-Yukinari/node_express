@@ -8,9 +8,9 @@ machine:
   timezone: Asia/Tokyo
   test:
     override:
-      - "exit 1"
+      - "npm run test"
   deployment:
     production:
       branch: master
       commands:
-        - https://registry.hub.docker.com/u/seiyukinari/node_express/trigger/$DOCKER_HUB_TOKEN/
+        - curl -X POST https://registry.hub.docker.com/u/seiyukinari/node_express/trigger/$DOCKER_HUB_TOKEN/S
