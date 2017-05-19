@@ -1,16 +1,9 @@
 machine:
-  environment:
-    NODE_ENV: development
   node:
-    version: "6.9.1"
-  post:
-    - "npm install -g npm@3"
-  timezone: Asia/Tokyo
-  test:
-    override:
-      - "npm run test"
-  deployment:
-    master:
-      branch: master
-      commands:
-        - ./deploy.sh
+    version: 6.9.1
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - ./deploy.sh
